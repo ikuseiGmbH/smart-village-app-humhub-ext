@@ -66,6 +66,21 @@ class Events
             //space
             ['pattern' => 'space', 'route' => 'smartVillage/space/space/find', 'verb' => 'GET'],
             ['pattern' => 'space/<spaceId:\d+>', 'route' => 'smartVillage/space/space/view', 'verb' => 'GET'],
+
+            //category
+            ['pattern' => 'categories', 'route' => 'smartVillage/linklist/category/index', 'verb' => 'GET'],
+            ['pattern' => 'category/<categoryId:\d+>', 'route' => 'smartVillage/linklist/category/view', 'verb' => 'GET'],
+            ['pattern' => 'category', 'route' => 'smartVillage/linklist/category/create-category', 'verb' => 'POST'],
+            ['pattern' => 'category/<categoryId:\d+>', 'route' => 'smartVillage/linklist/category/edit-category', 'verb' => ['PUT','PATCH']],
+            ['pattern' => 'delete/category/<categoryId:\d+>', 'route' => 'smartVillage/linklist/category/delete-category', 'verb' => 'DELETE'],
+
+            //links
+            ['pattern' => 'links', 'route' => 'smartVillage/linklist/link/index', 'verb' => 'GET'],
+            ['pattern' => 'link/<linkId:\d+>', 'route' => 'smartVillage/linklist/link/view', 'verb' => 'GET'],
+            ['pattern' => 'link', 'route' => 'smartVillage/linklist/link/create-link', 'verb' => 'POST'],
+            ['pattern' => 'link/<linkId:\d+>', 'route' => 'smartVillage/linklist/link/edit-link', 'verb' => ['PUT','PATCH']],
+            ['pattern' => 'delete/link/<linkId:\d+>', 'route' => 'smartVillage/linklist/link/delete-link', 'verb' => 'DELETE'],
+            ['pattern' => 'link/category/<categoryId:\d+>', 'route' => 'smartVillage/linklist/link/link-category', 'verb' => 'GET'],
         ], 'smartVillage');
     }
 }
