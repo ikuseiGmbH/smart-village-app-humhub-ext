@@ -69,6 +69,9 @@ class Events
 
             //space membership
             ['pattern' => 'space/<spaceId:\d+>/membership/<userId:\d+>', 'route' => 'smartVillage/space/membership/create', 'verb' => 'POST'],
+
+            //E-mail and Web Notification Setting
+            ['pattern' => 'settings', 'route' => 'smartVillage/setting/notification/save-settings', 'verb' => 'PUT'],
         ], 'smartVillage');
     }
 }
